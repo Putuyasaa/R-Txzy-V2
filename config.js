@@ -41,27 +41,8 @@ global.APIKeys = { // APIKey nya disini
 }
 
 // Sticker WM
-
-const spack = fs.readFileSync("lib/exif.json")
-const stickerpack = JSON.parse(spack)
-if (stickerpack.spackname == '') {
-  var sticker_name = 'Sink Memodal:V'
-  var sticker_author = 'JuniArta'
-} else {
-  var sticker_name = stickerpack.spackname
-  var sticker_author = stickerpack.sauthor
-}
-
-const file_exif = "lib/exif.json"
-fs.watchFile(file_exif, () => {
-  fs.unwatchFile(file_exif)
-  console.log(chalk.redBright("Update 'exif.json'"))
-  delete require.cache[file_exif]
-  require('./lib/exif.json')
-})
-
-global.packname = sticker_name
-global.author = sticker_author
+global.packname = 'Exc'
+global.author = 'NyyXz'
 
 global.wait = '「 ⏱️ 」Harap tunggu...'
 global.eror = '「❗」Server ERROR!'
